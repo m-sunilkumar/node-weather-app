@@ -1,0 +1,25 @@
+{
+  "name": "weather-application",
+  "version": "1.0.0",
+  "description": "shows weather information of address",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.4",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunil-piktor/node-weather-app.git"
+  },
+  "author": "sunilkumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunil-piktor/node-weather-app/issues"
+  },
+  "homepage": "https://github.com/sunil-piktor/node-weather-app#readme"
+}

@@ -19,10 +19,11 @@ weatherForm.addEventListener('submit', (e) => {
             if (data.error) {
                 messageOne.textContent = data.error
             } else {
+                
                 messageOne.textContent = data.location
                 messageTwo.textContent = `Climate Type: ${data.weather.address.icon}`
                 messageThree.textContent=`wind speed: ${data.weather.address.windSpeed} KMPH`
-                messageFour.textContent=`Temperature: ${(data.weather.address.temperature)-32 *5/9} Celcius`
+                messageFour.textContent=`Temperature: ${Math.round((data.weather.address.temperature-32) * (5/9))} ℃`
             }
         })
     })

@@ -3,6 +3,8 @@ const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
+const messageThree = document.querySelector('#message-3')
+const messageFour = document.querySelector('#message-4')
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -18,7 +20,9 @@ weatherForm.addEventListener('submit', (e) => {
                 messageOne.textContent = data.error
             } else {
                 messageOne.textContent = data.location
-                messageTwo.textContent = data.weather.address.icon
+                messageTwo.textContent = `Climate Type: ${data.weather.address.icon}`
+                messageThree.textContent=`wind speed: ${data.weather.address.windSpeed} KMPH`
+                messageFour.textContent=`Temperature: ${(data.weather.address.temperature)-32 *5/9} Celcius`
             }
         })
     })

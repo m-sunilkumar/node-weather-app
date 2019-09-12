@@ -5,6 +5,7 @@ const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
 const messageThree = document.querySelector('#message-3')
 const messageFour = document.querySelector('#message-4')
+const messageFive = document.querySelector('#message-5')
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -24,6 +25,7 @@ weatherForm.addEventListener('submit', (e) => {
                 messageTwo.textContent = `Climate Type: ${data.weather.address.icon}`
                 messageThree.textContent=`wind speed: ${data.weather.address.windSpeed} KMPH`
                 messageFour.textContent=`Temperature: ${Math.round((data.weather.address.temperature-32) * (5/9))} ℃`
+                messageFive.textContent=`There is a ${data.weather.address.precipProbability} % chance of raining`
             }
         })
     })

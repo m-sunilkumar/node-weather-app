@@ -7,6 +7,7 @@ const forecast = require("./utils/forecast");
 const htmlFilePath = path.join(__dirname, "../public");
 
 const app = express();
+const port=process.env.PORT || 3001
 
 const viewsPath = path.join(__dirname, "../templates/views");
 const partialsPath = path.join(__dirname, "../templates/partials");
@@ -60,6 +61,6 @@ app.get("/help", (req, res) => {
   });
 });
 
-app.listen(3001, () => {
-  console.log("server is running on port 3001");
+app.listen(port, () => {
+  console.log("server is running on port"+port);
 });
